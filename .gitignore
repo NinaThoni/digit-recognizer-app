@@ -1,0 +1,11 @@
+__pycache__/
+*.pyc
+*.pyo
+
+venv/
+data/
+.env
+*.log
+.docker/
+*.sock
+*.pth
