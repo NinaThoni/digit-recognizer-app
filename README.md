@@ -1,1 +1,2 @@
-# digit-recognizer-app
+# digit-recognizer
+MNIST Digit-Recognizer app

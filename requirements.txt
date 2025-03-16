@@ -1,0 +1,11 @@
+numpy==2.2.3
+Pillow==11.1.0
+psycopg2==2.9.10
+python-dotenv==1.0.1
+streamlit==1.43.2
+streamlit_drawable_canvas==0.9.3
+torch==2.6.0
+torchvision
+-f https://download.pytorch.org/whl/torch_stable.html
+
+
