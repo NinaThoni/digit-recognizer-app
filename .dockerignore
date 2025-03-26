@@ -1,0 +1,16 @@
+*.csv
+*.zip
+*.gz
+*.tar
+*.h5
+*.pkl
+*.pt
+*.pth
+*.log
+data/
+logs/
+models/
+__pycache__/
+.git/
+venv/
+.env
