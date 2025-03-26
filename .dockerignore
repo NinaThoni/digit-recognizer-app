@@ -9,7 +9,6 @@
 *.log
 data/
 logs/
-models/
 __pycache__/
 .git/
 venv/
