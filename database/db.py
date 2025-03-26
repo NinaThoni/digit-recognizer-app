@@ -9,14 +9,16 @@ load_dotenv()
 POSTGRES_USER = os.getenv('POSTGRES_USER')
 POSTGRES_PASSWORD = os.getenv('POSTGRES_PASSWORD')
 POSTGRES_DB = os.getenv('POSTGRES_DB')
-POSTGRES_HOST = os.getenv('POSTGRES_HOST')
+POSTGRES_HOST = os.getenv('POSTGRES_HOST', "db")
+DB_PORT = os.getenv('DB_PORT', "5432")
 
 def connect_db():
     return psycopg2.connect(
         host=POSTGRES_HOST,
         database=POSTGRES_DB,
         user=POSTGRES_USER,
-        password=POSTGRES_PASSWORD
+        password=POSTGRES_PASSWORD,
+        port=DB_PORT
     )
 
 def insert_prediction(predicted_digit, true_label=None):
