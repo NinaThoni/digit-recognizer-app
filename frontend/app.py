@@ -18,7 +18,6 @@ model.eval()
 
 # Image preprocessing
 transform = transforms.Compose([
-    transforms.Grayscale(num_output_channels=1),
     transforms.Resize((28, 28)),
     transforms.ToTensor(),
     transforms.Normalize((0.1307,), (0.3081,))
@@ -51,7 +50,8 @@ predict_button = st.button("Predict", disabled=predict_button_disabled)
 
 if predict_button:
     if canvas_result.image_data is not None:
-        img = Image.fromarray((canvas_result.image_data[:, :, 0]).astype("uint8"))
+        img_array = (canvas_result.image_data[:, :, :3] * 255).astype("uint8")  
+        img = Image.fromarray(img_array).convert("L") 
         img = transform(img)
         img = img.unsqueeze(0)
 
