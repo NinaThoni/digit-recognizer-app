@@ -8,7 +8,10 @@ import torchvision.transforms as transforms
 from PIL import Image
 from streamlit_drawable_canvas import st_canvas
 from model.model import DigitClassifier
-from database.db import insert_prediction, fetch_predictions  # Import fetch function
+from database.db import insert_prediction, fetch_predictions, init_db
+
+init_db() 
+
 
 # Load model
 MODEL_PATH = "model/mnist_cnn.pth"

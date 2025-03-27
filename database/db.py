@@ -21,6 +21,22 @@ def connect_db():
         port=DB_PORT
     )
 
+def init_db():
+    conn = connect_db()
+    cursor = conn.cursor()
+    cursor.execute("""
+        CREATE TABLE IF NOT EXISTS predictions (
+            id SERIAL PRIMARY KEY,
+            timestamp TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
+            predicted_digit INTEGER NOT NULL,
+            true_label INTEGER
+        );
+    """)
+    conn.commit()
+    cursor.close()
+    conn.close()
+
+
 def insert_prediction(predicted_digit, true_label=None):
     """Insert a new prediction into the database."""
     conn = connect_db()
