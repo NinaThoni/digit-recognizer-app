@@ -12,7 +12,6 @@ from database.db import insert_prediction, fetch_predictions, init_db
 
 init_db() 
 
-
 # Load model
 MODEL_PATH = "model/mnist_cnn.pth"
 model = DigitClassifier()

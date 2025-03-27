@@ -75,5 +75,3 @@ def fetch_predictions():
     conn.close()
     return result  # Returns list of tuples (timestamp, predicted_digit, true_label)
 
-
-fetch_predictions()
