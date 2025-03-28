@@ -30,7 +30,9 @@ A web-based digit recognition app built with **PyTorch**, **Streamlit**, and **P
 
 ##  Demo
 
+
 ![image](https://github.com/user-attachments/assets/afbce585-1727-401c-86db-454d5d5359f9)
+
 
 
 ---
@@ -43,13 +45,6 @@ A web-based digit recognition app built with **PyTorch**, **Streamlit**, and **P
 4. A history of recent predictions is displayed below the app
 
 ---
-
-##  Local Setup
-
-### Prerequisites
-
-- Docker
-- Docker Compose
 
 ### File Structure
 
