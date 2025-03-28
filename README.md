@@ -53,4 +53,22 @@ A web-based digit recognition app built with **PyTorch**, **Streamlit**, and **P
 
 ### File Structure
 
-<pre> ```none digit-recognizer/ │ ├── model/ # Saved PyTorch model (.pth) │ ├── model.py │ └── train.py │ ├── database/ │ └── db.py # PostgreSQL connection and logging logic │ ├── frontend/ │ └── app.py # Streamlit app │ ├── Dockerfile # Dockerfile for the app container ├── docker-compose.yml # Multi-container setup (App + DB) ├── requirements.txt # Python dependencies └── .env # Environment variables (not committed) ``` </pre>
+```none
+digit-recognizer/
+│
+├── model/                       # Saved PyTorch model (.pth)
+│   ├── model.py
+│   └── train.py
+│
+├── database/
+│   └── db.py                    # PostgreSQL connection and logging logic
+│
+├── frontend/
+│   └── app.py                   # Streamlit app
+│
+├── Dockerfile                   # Dockerfile for the app container
+├── docker-compose.yml           # Multi-container setup (App + DB)
+├── requirements.txt             # Python dependencies
+└── .env                         # Environment variables (not committed)
+```
+
